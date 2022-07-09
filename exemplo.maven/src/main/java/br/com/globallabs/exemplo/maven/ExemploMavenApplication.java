@@ -1,11 +1,10 @@
-package br.com.globallabs.exemplo.maven;
-
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+import java.io.*;
 import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
 
-@SpringBootApplication
-public class ExemploMavenApplication {
+public class Solution {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
@@ -29,11 +28,8 @@ public class ExemploMavenApplication {
 			if (querie.equals("Insert")) {
 				String[] parameters_insert_string = parameters.split(" ");
 				int index = Integer.parseInt(parameters_insert_string[0]);
-				if (index < list_input.size()) {
-					list_input.add(index, parameters_insert_string[1]);
-				} if (index == list_input.size()) {
-					list_input.add(parameters_insert_string[1]);
-				}
+				list_input.add(index, parameters_insert_string[1]);
+
 
 			} else {
 				int parameters_ajustment = Integer.parseInt(parameters);
@@ -48,6 +44,5 @@ public class ExemploMavenApplication {
 		for (int i  = 1; i < list_input.size(); i++) {
 			System.out.print(" " + list_input.get(i));
 		}
-
 	}
 }
