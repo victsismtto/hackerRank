@@ -1,10 +1,11 @@
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+package br.com.globallabs.exemplo.maven;
 
-public class Solution {
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.*;
+
+@SpringBootApplication
+public class ExemploMavenApplication {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
@@ -30,7 +31,6 @@ public class Solution {
 				int index = Integer.parseInt(parameters_insert_string[0]);
 				list_input.add(index, parameters_insert_string[1]);
 
-
 			} else {
 				int parameters_ajustment = Integer.parseInt(parameters);
 				if (list_input.size() > parameters_ajustment) {
@@ -44,5 +44,6 @@ public class Solution {
 		for (int i  = 1; i < list_input.size(); i++) {
 			System.out.print(" " + list_input.get(i));
 		}
+
 	}
 }
